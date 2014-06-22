@@ -1,0 +1,25 @@
+Login and Register API.
+
+	Login
+		send mobile, pwd
+		api.kedesa.com/login.php
+		
+	Register
+		Stage 1
+			send {stage (1), mobile, pwd, c_pwd}
+			api.kedesa.com/register.php
+		Stage 2
+			send {stage (2), mobile, ver_code(6 chars)}
+			api.kedesa.com/register.php
+		Stage 3
+			send {stage (3), mobile, username, name, sex(M,F), per_sign(10 chars), email}
+			
+	Status Codes;
+		100 - Success
+		101 - Database error
+		102 - username or password Error
+		103 - Field Empty
+		104 - Passwords do not match
+		105 - Account Already Exists
+		106 - SMS Message API Error
+		107 - Wrong Verification Code
